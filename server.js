@@ -2,8 +2,11 @@ import express from "express";
 
 const app = express();
 
-app.use("/home", (req, res) => {
+app.get("/home", (req, res) => {
   res.status(200).json("Welcome, your app is working well in server");
+});
+app.get("/", (req, res) => {
+  res.status(200).json("Welcome, TAHA ALI Bhai!");
 });
 
 const PORT = 5300;
